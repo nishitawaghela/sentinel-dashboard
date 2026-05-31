@@ -86,7 +86,7 @@ with tab1:
         color = '#dc2626' if '🚨' in val else '#10b981'
         return f'background-color: {color}; color: white; font-weight: bold;'
 
-    st.dataframe(mock_log.style.applymap(color_status, subset=['status']), use_container_width=True, hide_index=True)
+    st.dataframe(mock_log.style.map(color_status, subset=['status']), use_container_width=True, hide_index=True)
 
 # ==========================================
 # TAB 2: INTERACTIVE ATTACK SIMULATOR
