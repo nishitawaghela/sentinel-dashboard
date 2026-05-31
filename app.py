@@ -11,16 +11,26 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# --- Custom Styling for Financial Terminal Vibe ---
+# --- Custom Styling for Premium Light Theme Financial Terminal ---
 st.markdown("""
     <style>
-    .main { background-color: #0e1117; color: #ffffff; }
-    .stMetric { background-color: #1f2937; padding: 15px; border-radius: 8px; border: 1px solid #374151; }
-    h1, h2, h3 { color: #f3f4f6; font-family: 'Courier New', Courier, monospace; }
+    /* Main app background and primary text */
+    .main { background-color: #f8fafc; color: #0f172a; }
+    
+    /* Metrics cards - light gray/blue with a subtle border */
+    .stMetric { background-color: #ffffff; padding: 15px; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+    
+    /* Headers typography */
+    h1, h2, h3 { color: #0f172a; font-family: 'Courier New', Courier, monospace; font-weight: bold; }
+    
+    /* Sidebar styling tweaks for light contrast */
+    [data-testid="stSidebar"] { background-color: #ffffff; border-right: 1px solid #e2e8f0; }
+    
+    /* Action button styling */
     div.stButton > button:first-child {
-        background-color: #dc2626; color: white; font-weight: bold; width: 100%; border: none;
+        background-color: #e11d48; color: white; font-weight: bold; width: 100%; border: none; border-radius: 6px;
     }
-    div.stButton > button:first-child:hover { background-color: #b91c1c; }
+    div.stButton > button:first-child:hover { background-color: #be123c; }
     </style>
 """, unsafe_allow_html=True)
 
